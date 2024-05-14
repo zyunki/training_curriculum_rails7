@@ -36,7 +36,7 @@ class CalendarsController < ApplicationController
         today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
       wday_num = (@todays_date + x).wday 
-      #今日（火曜日）からx日後の曜日を習得、一回目を2,二回目を3,・・・五回目を6,六回目を７→if文でtureなので-7よって０を習得
+      #今日（火曜日）からx日後の曜日を習得、一回目を2,二回目を3,・・・五回目を6,六回目を７→if文でtrueなので-7よって０を習得
       if wday_num >= 7
         wday_num = wday_num -7
       end
